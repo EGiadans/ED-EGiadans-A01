@@ -1,0 +1,12 @@
+#include "Punto.h"
+
+
+
+Point::Point()
+{
+}
+
+
+Point::~Point()
+{
+}
