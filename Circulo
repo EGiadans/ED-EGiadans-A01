@@ -1,0 +1,121 @@
+#include <iostream>
+//using namespace std;
+
+class Figura {
+protected:
+	int area;
+	int perim;
+
+public:
+	int getArea(void);
+	int getPerim(void);
+	void setArea(int ar);
+	void setPerim(int pe);
+};
+
+int Figura::getArea() {
+	return area;
+}
+
+int Figura::getPerim() {
+	return perim;
+}
+
+void Figura::setArea(int ar) {
+	area = ar;
+
+}
+
+void Figura::setPerim(int pe) {
+	perim = pe;
+
+}
+
+class Circulo :public Figura {
+private:
+	int radio;
+	Figura area;
+	Figura perim;
+
+public:
+	Figura getArea(void);
+	Figura getPerim(void);
+	int getRadio(void);
+	void setPerim(Figura perim);
+	void setArea(Figura area);
+	void setRadio(int rad);
+	Circulo(int ra, Figura pe, Figura ar);
+	Circulo(int ra, Figura pe);
+	//Circulo(int ra, Figura ar);
+	Circulo(Figura pe, Figura ar);
+	Circulo(int ra);
+	Circulo(Figura pe);
+	//Circulo(Figura ar);
+	Circulo();
+};
+
+Circulo::Circulo(int ra, Figura pe, Figura ar)
+{
+	radio = ra;
+	perim = pe;
+	area = ar;
+}
+
+Circulo::Circulo(int ra, Figura pe) {
+	radio = ra;
+	perim = pe;
+}
+
+//Circulo::Circulo(int ra, Figura ar) {
+	//radio = ra;
+	//area = ar;
+//}
+
+Circulo::Circulo(Figura pe, Figura ar) {
+	perim = pe;
+	area = ar;
+}
+
+Circulo::Circulo(int ra) {
+	radio = ra;
+}
+
+Circulo::Circulo(Figura pe) {
+	perim = pe;
+}
+
+//Circulo::Circulo(Figura ar) {
+	//area = ar;
+//}
+Circulo::Circulo() {
+}
+
+void Circulo::setRadio(int ra) {
+	radio = ra;
+
+}
+
+int Circulo::getRadio() {
+	return radio;
+}
+
+void Circulo::setPerim(Figura pe) {
+	perim = pe;
+
+}
+
+Figura Circulo::getPerim() {
+	return perim;
+}
+
+void Circulo::setArea(Figura ar) {
+	area = ar;
+
+}
+
+Figura Circulo::getArea() {
+	return area;
+}
+
+
+
