@@ -1,0 +1,196 @@
+#include <iostream>
+using namespace std;
+
+class Figura {
+protected:
+	int area;
+	int perim;
+
+public:
+	int getArea(void);
+	int getPerim(void);
+	void setArea(int ar);
+	void setPerim(int pe);
+};
+
+int Figura::getArea() {
+	return area;
+}
+
+int Figura::getPerim() {
+	return perim;
+}
+
+void Figura::setArea(int ar) {
+	area = ar;
+
+}
+
+void Figura::setPerim(int pe) {
+	perim = pe;
+
+}
+
+class Triangulo : public Figura {
+private:
+	int base, altura, hip, sen, cos, tan;
+	Figura area;
+	Figura perim;
+
+public:
+	Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura pe, Figura ar);
+	Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura pe);
+	Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura ar);
+	Triangulo(int ba, int al, int hi, int se, int co, int ta);
+	Triangulo();
+	Figura getArea(void);
+	Figura getPerim(void);
+	int getBase(void);
+	void setBase(int ba);
+
+	int getAltura(void);
+	void setAltura(int al);
+
+	int getHip(void);
+	void setHip(int hi);
+
+	int getSen(void);
+	void setSen(int se);
+
+	int getCos(void);
+	void setCos(int co);
+
+	int getTan(void);
+	void setTan(int ta);
+	
+	void setPerim(Figura pe);
+	void setArea(Figura ar);
+	
+
+	
+};
+Triangulo::Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura pe, Figura ar) {
+	base = ba;
+	altura = al;
+	sen = se;
+	cos = co;
+	tan = ta;
+	perim = pe;
+	area = ar;
+	
+}
+
+Triangulo::Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura pe) {
+	base = ba;
+	altura = al;
+	sen = se;
+	cos = co;
+	tan = ta;
+	perim = pe;
+	area = area;
+	
+}
+
+Triangulo::Triangulo(int ba, int al, int hi, int se, int co, int ta, Figura ar) {
+	base = ba;
+	altura = al;
+	sen = se;
+	cos = co;
+	tan = ta;
+	area = ar;
+	perim = perim;
+}
+
+Triangulo::Triangulo(int ba, int al, int hi, int se, int co, int ta) {
+	base = ba;
+	altura = al;
+	sen = se;
+	cos = co;
+	tan = ta;
+	
+}
+
+Triangulo::Triangulo() {
+	base = base;
+	altura = altura;
+	sen = sen;
+	cos = cos;
+	tan = tan;
+	perim = perim;
+	area = area;
+}
+
+
+void Triangulo::setPerim(Figura pe) {
+	perim = pe;
+
+}
+
+Figura Triangulo::getPerim() {
+	return perim;
+}
+
+void Triangulo::setArea(Figura ar) {
+	area = ar;
+
+}
+
+Figura Triangulo::getArea() {
+	return area;
+}
+
+
+void Triangulo::setBase(int ba) {
+	base = ba;
+
+}
+
+int Triangulo::getBase() {
+	return base;
+}
+
+void Triangulo::setAltura(int al) {
+	altura = al;
+
+}
+
+int Triangulo::getAltura() {
+	return altura;
+}
+
+void Triangulo::setHip(int hi) {
+	hip = hi;
+
+}
+
+int Triangulo::getHip() {
+	return hip;
+
+}
+void Triangulo::setSen(int se) {
+	sen = se;
+
+}
+
+int Triangulo::getSen() {
+	return sen;
+
+}
+void Triangulo::setCos(int co) {
+	cos = co;
+
+}
+
+int Triangulo::getCos() {
+	return cos;
+
+}
+void Triangulo::setTan(int ta) {
+	tan = ta;
+
+}
+
+int Triangulo::getTan() {
+	return tan;
+
+}
