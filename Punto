@@ -1,0 +1,77 @@
+#pragma once
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Punto
+{
+public:
+	Punto();
+	~Punto();
+	void setX(int x);
+	int getX(void);
+	void setY(int y);
+	int getY(void);
+	void setZ(int z);
+	int getZ(void);
+	void setDim(string dim);
+	string getDim(void);
+	Punto(int cX, int cY, int cZ);
+	Punto(int cX, int cY);
+
+private:
+	string dim;
+	int x, y, z;
+};
+
+Punto::Punto(int cX, int cY, int cZ) {
+	x = cX;
+	y = cY;
+	z = cZ;
+	dim = "Tres dimensiones";
+}
+
+Punto::Punto(int cX, int cY) {
+	x = cX;
+	y = cY;
+	dim = "Dos dimensiones";
+}
+
+Punto::Punto() {
+	x = 0;
+	y = 0;
+	z = 0;
+	dim = "Ninguna dimensión";
+}
+
+void Punto::setX(int cX) {
+	x = cX;
+
+}
+void Punto::setY(int cY) {
+	y = cY;
+
+}
+void Punto::setZ(int cZ) {
+	z = cZ;
+
+}
+
+
+int Punto::getX() {
+	return x;
+}
+int Punto::getY() {
+	return y;
+}
+int Punto::getZ() {
+	return z;
+}
+
+void Punto::setDim(string dim) {
+	dim = dim;
+}
+
+string Punto::getDim() {
+	return dim;
+}
