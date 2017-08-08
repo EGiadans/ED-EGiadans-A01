@@ -6,18 +6,20 @@ using namespace std;
 class Punto
 {
 public:
+	
+	Punto(int cX, int cY, int cZ);
+	Punto(int cX, int cY);
 	Punto();
 	~Punto();
 	void setX(int x);
-	int getX(void);
 	void setY(int y);
-	int getY(void);
 	void setZ(int z);
-	int getZ(void);
 	void setDim(string dim);
+	int getX(void);
+	int getY(void);
+	int getZ(void);
 	string getDim(void);
-	Punto(int cX, int cY, int cZ);
-	Punto(int cX, int cY);
+	
 
 private:
 	string dim;
